@@ -9,10 +9,7 @@ import {
     Image,
     FlatList,
 } from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
-
 import { icons, images, SIZES, COLORS, FONTS } from '../constants';
-import AsyncStorage from "@react-native-community/async-storage";
 import moment from 'moment'
 import { useDispatch, useSelector } from 'react-redux'
 import { useFocusEffect } from '@react-navigation/native'

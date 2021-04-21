@@ -3,12 +3,10 @@ import * as api from "../api/index.js";
 
 export const updateImageFile = (formData) => async (disptach) => {
   
-  console.log(formData)
-  
   try {
-    
+    const { data } = await api.updateImageFile(formData);  
   } catch (error) {
-    
+    console.log(error);
   }
 }
 
@@ -25,7 +23,6 @@ export const getAuthUser = (formData) => async (dispatch) => {
 
 export const updateStatus = (formData) => async (dispatch) => {
   
-  console.log(formData)
   try {
     const { data } = await api.updateStatus(formData);
   } catch (error) {

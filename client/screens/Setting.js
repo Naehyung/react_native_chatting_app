@@ -144,7 +144,8 @@ const Setting = ({ navigation }) => {
             cropping: true,
         }).then(image => {
             setImageFile(image.path)
-            dispatch(updateImageFile(image.path))
+            const authUserID = user._id;
+            dispatch(updateImageFile({UserID: authUserID, ImageFile: image.path}))
         });
     }
 
@@ -155,7 +156,8 @@ const Setting = ({ navigation }) => {
             cropping: true
         }).then(image => {
             setImageFile(image.path)
-            dispatch(updateImageFile(image.path))
+            const authUserID = user._id;
+            dispatch(updateImageFile({UserID: authUserID, ImageFile: image.path}))
         });
     }
 

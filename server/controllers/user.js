@@ -4,7 +4,14 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.js";
 
 export const updateImageFile = async(req,res)=> {
+
+    const {UserID, ImageFile} = req.body;
     try {
+        
+        const user = await User.findById(UserID);
+        const update = await user.updateOne({
+            imageFile: ImageFile,
+        })
         
     } catch (error) {
         

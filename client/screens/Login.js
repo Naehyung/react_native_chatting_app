@@ -31,6 +31,7 @@ const Login = ({ navigation }) => {
 
     function handleLogin() {
         dispatch(login(formData, navigation));
+        
     }
 
     useEffect(() => {

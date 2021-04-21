@@ -115,7 +115,9 @@ const Home = ({ navigation, route }) => {
                     paddingLeft: SIZES.padding * 2,
                 }}>
                     <Image
-                        source={authUser.imageFile}
+                        source={{
+                            uri: authUser.imageFile
+                        }}
                         resizeMode="contain"
                         style={{
                             width: 50,
@@ -158,7 +160,9 @@ const Home = ({ navigation, route }) => {
                         paddingLeft: SIZES.padding
                     }}>
                         <Image
-                            source={!item.imageFile ? icons.user : item.imageFile}
+                            source={!item.imageFile ? icons.user : {
+                                uri: authUser.imageFile
+                            }}
                             resizeMode="contain"
                             style={{
                                 width: 40,
